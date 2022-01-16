@@ -1,7 +1,6 @@
 {
   "name": "morepractice",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +14,14 @@
     "mailgun-js": "^0.22.0",
     "mongodb": "^4.2.2",
     "mongoose": "^6.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girts521/portfolio_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/girts521/portfolio_api/issues"
+  },
+  "homepage": "https://github.com/girts521/portfolio_api#readme",
+  "description": ""
 }
