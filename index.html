@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>API</title>
+</head>
+
+<body>
+
+    <h1>My api form</h1>
+
+    <form action="http://localhost:5000/">
+        <label for="email">Enter email</label>
+        <input type="email" name="email" id="email">
+
+        <button>Submit</button>
+    </form>
+
+
+    <script>
+        const form = document.querySelector('form');
+        const email = document.querySelector('#email');
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+            const data = email.value;
+            console.log('click', data)
+
+            // const name = "girts"
+
+            axios.post("http://localhost:5000/data", {
+                headers: { 'Content-Type': 'application/json' },
+                data: {name: "girts"},
+                something: {else: "works?"}
+            })
+                .then(res => {
+                    console.log(res.data.msg)
+                })
+
+            //             axios({
+            //     method: 'post',
+            //     url: '/data',
+            //     headers: {'Content-Type' : 'application/json'},
+            //     body: {name: "girts"}
+            // })
+
+        })
+    </script>
+</body>
+
+</html>
